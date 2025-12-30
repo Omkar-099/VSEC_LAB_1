@@ -1,12 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Web Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Webpage</title>
+    <style>
+        /* Basic CSS to make the page look modern */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: white;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
 
-  <h1>Hello, World!</h1>
-  <p>This is a simple HTML page.</p>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+
+    <main>
+        <h2>About This Page</h2>
+        <p>This is a simple HTML5 template. It includes a header, a main content area, and some internal CSS styling.</p>
+        
+        <p>HTML provides the <strong>structure</strong>, CSS provides the <strong>style</strong>, and JavaScript provides the <strong>behavior</strong>.</p>
+
+        <button id="greetBtn">Click Me!</button>
+        <p id="message"></p>
+    </main>
+
+    <script>
+        // Simple JavaScript for interactivity
+        const button = document.getElementById('greetBtn');
+        const message = document.getElementById('message');
+
+        button.addEventListener('click', () => {
+            message.textContent = "Hello! You just interacted with a webpage.";
+            message.style.color = "green";
+        });
+    </script>
 
 </body>
 </html>
